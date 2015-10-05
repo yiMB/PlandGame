@@ -9,11 +9,23 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class PlandGame extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
-	
+
+	float screenWidth, screenHeight, textureWidth, textureHeight;
+
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
+
+		screenWidth = Gdx.graphics.getWidth();
+		screenHeight = Gdx.graphics.getHeight();
+		textureWidth = img.getWidth();
+		textureHeight = img.getHeight();
+
+		Gdx.app.log("MyTag", "screenWidth = " + screenWidth);
+		Gdx.app.log("MyTag", "screenHeight = " + screenHeight);
+		Gdx.app.log("MyTag", "textureWidth = " + textureWidth);
+		Gdx.app.log("MyTag", "textureHeight = " + textureHeight);
 	}
 
 	@Override
